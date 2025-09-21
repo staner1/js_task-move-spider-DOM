@@ -10,10 +10,7 @@ document.addEventListener('click', (e) => {
       y: e.clientY,
     };
 
-    const wallPosition = {
-      x: wall.offsetLeft,
-      y: wall.offsetTop,
-    };
+    const wallPosition = wall.getBoundingClientRect();
 
     const wallBorders = {
       x: wall.clientLeft,
