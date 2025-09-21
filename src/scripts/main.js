@@ -17,9 +17,14 @@ document.addEventListener('click', (e) => {
       y: wall.clientTop,
     };
 
+    const spiderSize = {
+      width: spider.offsetWidth,
+      heigth: spider.offsetHeight,
+    };
+
     const calcedCoords = {
-      x: coordsClick.x - wallPosition.x - wallBorders.x - spider.height / 2,
-      y: coordsClick.y - wallPosition.y - wallBorders.y - spider.height / 2,
+      x: coordsClick.x - wallPosition.x - wallBorders.x - spiderSize.width / 2,
+      y: coordsClick.y - wallPosition.y - wallBorders.y - spiderSize.heigth / 2,
     };
 
     if (calcedCoords.x < 0) {
